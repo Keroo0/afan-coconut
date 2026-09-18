@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=DM+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Baloo 2", ui-rounded, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+  --color-ink: #143e2b;
+  --color-lime: #c5f43d;
+  --color-cream: #f9faf6;
+  --color-coral: #ff6749;
+  --color-sky: #72d8ec;
+  --color-sun: #ffd83d;
+}
+
+@layer base {
+  * { @apply border-ink; }
+  html { @apply scroll-smooth; }
+  body { @apply m-0 bg-cream font-mono text-ink antialiased; }
+  a, button { @apply outline-none focus-visible:ring-4 focus-visible:ring-sky focus-visible:ring-offset-2 focus-visible:ring-offset-cream; }
+}
+
+@layer utilities {
+  .halftone { background-image: radial-gradient(rgb(20 62 43 / .18) 1px, transparent 1px); background-size: 10px 10px; }
+  .poster-shadow { box-shadow: 8px 8px 0 #143e2b; }
+  .coral-shadow { box-shadow: 6px 6px 0 #ff6749; }
+  .text-crush { letter-spacing: -.04em; }
+  .ticker-track { animation: ticker 16s linear infinite; }
+  .hero-wash { background-image: radial-gradient(circle at 83% 28%, rgb(197 244 61 / .32), transparent 28%), radial-gradient(circle at 65% 85%, rgb(114 216 236 / .28), transparent 30%); }
+  .safe-floating-bottom { bottom: calc(1rem + env(safe-area-inset-bottom)); }
+}
+
+@keyframes ticker { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ticker-track { animation: none; }
+}
