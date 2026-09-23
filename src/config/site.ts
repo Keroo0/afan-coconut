@@ -1,7 +1,7 @@
 export const siteConfig = {
   whatsappNumber: "6283863190378",
   whatsappMessage: "Halo Affan Coconut, saya mau tanya menu.",
-  address: "Kp. Pondok Jengkol, Pagedangan, Tangerang (dekat Medang)",
+  address: "Kp. Pondok Jengkol, Pagedangan, Tangerang (Pinggir Greenwich)",
   hours: "09.00–17.00",
   map: { latitude: -6.276357336681891, longitude: 106.62118741076166, zoom: 16 },
 } as const

@@ -27,7 +27,7 @@ export function MenuSection({ items }: { items: MenuItem[] }) {
       </div>
       <div className="grid gap-4 md:grid-cols-12 md:items-stretch md:gap-7">
         {items.map((item, index) => (
-          <Card data-testid="menu-card" key={item.name} className={cn("group grid min-h-[228px] grid-cols-[8.5rem_1fr] overflow-hidden rounded-2xl border-0 p-0 shadow-none md:block md:min-h-[560px] md:transition-transform md:duration-300 md:ease-out md:hover:-translate-y-2", item.color, item.layout)}>
+          <Card data-testid="menu-card" key={item.name} className={cn("group grid min-h-[228px] grid-cols-[8.5rem_1fr] overflow-hidden rounded-2xl border-0 p-0 shadow-none md:flex md:min-h-[560px] md:flex-col md:transition-transform md:duration-300 md:ease-out md:hover:-translate-y-2", item.color, item.layout)}>
             <CardHeader className="relative row-span-2 h-full min-h-[228px] overflow-hidden p-3 md:h-72 md:min-h-0 md:p-6">
               <span className="relative z-10 grid size-8 place-items-center rounded-full bg-cream font-mono text-[11px] font-bold md:size-9 md:text-xs">{String(index + 1).padStart(2, "0")}</span>
               <img src={item.image} srcSet={srcSetFor(item.image)} sizes="(min-width: 768px) 440px, 160px" alt={item.imageAlt} width="1254" height="1254" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-contain p-2 transition-transform duration-500 ease-out md:p-4 md:group-hover:scale-105" />

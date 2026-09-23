@@ -20,7 +20,7 @@ export function LocationSection() {
             <Button asChild className="w-full border-cream bg-cream text-ink shadow-none hover:bg-sun sm:w-auto"><a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Hubungi Affan Coconut melalui WhatsApp"><WhatsAppIcon className="size-5" /> TANYA &amp; PESAN</a></Button>
           </div>
         </div>
-        <div className="overflow-hidden rounded-2xl border-[3px] border-cream bg-cream shadow-[6px_6px_0_#c5f43d] md:shadow-[10px_10px_0_#c5f43d]">
+        <div className="overflow-hidden rounded-2xl border-[3px] border-cream bg-cream shadow-[6px_6px_0_var(--color-lime)] md:shadow-[10px_10px_0_var(--color-lime)]">
           <iframe title="Peta lokasi Affan Coconut" src={mapEmbedUrl} width="100%" height="480" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="block h-[310px] min-h-0 w-full border-0 grayscale-[.15] md:h-[480px] md:min-h-[380px]" />
         </div>
       </div>
