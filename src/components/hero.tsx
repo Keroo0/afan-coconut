@@ -2,6 +2,8 @@ import { ArrowDownRight, Sparkles } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
+const TICKER = "• KELAPA SEGAR • DINGINNYA PAS • HARGA BERSAHABAT • "
+
 export function Hero() {
   return (
     <>
@@ -22,8 +24,8 @@ export function Hero() {
           </div>
         </div>
       </section>
-      <div aria-label="Kelapa segar, dinginnya pas, harga bersahabat" className="overflow-hidden bg-ink py-3 text-lime">
-        <div className="ticker-track w-max whitespace-nowrap text-xs font-bold tracking-[.12em]">• KELAPA SEGAR • DINGINNYA PAS • HARGA BERSAHABAT • KELAPA SEGAR • DINGINNYA PAS • HARGA BERSAHABAT •&nbsp;</div>
+      <div className="overflow-hidden bg-ink py-3 text-lime">
+        <div aria-hidden="true" className="ticker-track w-max whitespace-nowrap text-xs font-bold tracking-[.12em]">{TICKER.repeat(8)}</div>
       </div>
     </>
   )

@@ -3,8 +3,7 @@ export const siteConfig = {
   whatsappMessage: "Halo Affan Coconut, saya mau tanya menu.",
   address: "Kp. Pondok Jengkol, Pagedangan, Tangerang (dekat Medang)",
   hours: "09.00–17.00",
-  // Titik sementara. Ganti dua angka ini setelah koordinat lokasi usaha tersedia.
-  map: { latitude: -6.27401, longitude: 106.62726, zoom: 16 },
+  map: { latitude: -6.276357336681891, longitude: 106.62118741076166, zoom: 16 },
 } as const
 
 export const whatsappUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`
