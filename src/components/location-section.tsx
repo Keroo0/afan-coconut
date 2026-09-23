@@ -6,7 +6,7 @@ import { mapDirectionsUrl, mapEmbedUrl, siteConfig, whatsappUrl } from "@/config
 
 export function LocationSection() {
   return (
-    <section id="lokasi" aria-labelledby="location-title" className="bg-ink px-4 py-14 text-cream sm:px-[6vw] md:py-28">
+    <section id="lokasi" aria-labelledby="location-title" className="bg-ink px-4 py-14 scroll-mt-20 text-cream sm:px-[6vw] sm:scroll-mt-24 md:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-9 md:gap-12 lg:grid-cols-[.8fr_1.2fr]">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 font-mono text-[11px] font-bold text-ink"><MapPin className="size-4" /> DEKAT, SEGAR, SIAP DINIKMATI</span>

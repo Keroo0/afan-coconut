@@ -13,9 +13,13 @@ export type MenuItem = {
   layout: string
 }
 
+function srcSetFor(image: string) {
+  return ["480", "640", "960"].map((w) => `${image.replace(".webp", `-${w}.webp`)} ${w}w`).join(", ")
+}
+
 export function MenuSection({ items }: { items: MenuItem[] }) {
   return (
-    <section id="menu" aria-labelledby="menu-title" className="bg-cream px-4 py-14 sm:px-[6vw] md:py-28">
+    <section id="menu" aria-labelledby="menu-title" className="bg-cream px-4 py-14 scroll-mt-20 sm:px-[6vw] sm:scroll-mt-24 md:py-28">
       <div className="mx-auto max-w-7xl">
       <div className="mb-8 max-w-3xl md:mb-12">
         <p className="mb-3 font-mono text-sm font-bold text-coral">Tinggal pilih, semua bikin seger.</p>
@@ -26,7 +30,7 @@ export function MenuSection({ items }: { items: MenuItem[] }) {
           <Card data-testid="menu-card" key={item.name} className={cn("group grid min-h-[228px] grid-cols-[8.5rem_1fr] overflow-hidden rounded-2xl border-0 p-0 shadow-none md:block md:min-h-[560px] md:transition-transform md:duration-300 md:ease-out md:hover:-translate-y-2", item.color, item.layout)}>
             <CardHeader className="relative row-span-2 h-full min-h-[228px] overflow-hidden p-3 md:h-72 md:min-h-0 md:p-6">
               <span className="relative z-10 grid size-8 place-items-center rounded-full bg-cream font-mono text-[11px] font-bold md:size-9 md:text-xs">{String(index + 1).padStart(2, "0")}</span>
-              <img src={item.image} alt={item.imageAlt} width="1254" height="1254" loading="lazy" className="absolute inset-0 h-full w-full object-contain p-2 transition-transform duration-500 ease-out md:p-4 md:group-hover:scale-105" />
+              <img src={item.image} srcSet={srcSetFor(item.image)} sizes="(min-width: 768px) 440px, 160px" alt={item.imageAlt} width="1254" height="1254" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-contain p-2 transition-transform duration-500 ease-out md:p-4 md:group-hover:scale-105" />
             </CardHeader>
             <CardContent className="bg-[#f9faf6] px-4 pb-1 pt-5 md:px-6 md:pb-0 md:pt-7">
               <CardTitle aria-label={item.name} className="text-crush text-[1.85rem] leading-[.88] sm:text-4xl lg:text-5xl">{item.label[0]}<br />{item.label[1]}</CardTitle>

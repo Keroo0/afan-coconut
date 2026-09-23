@@ -15,7 +15,7 @@ export default function App() {
     <div className="min-h-screen overflow-x-hidden">
       <a href="#isi" className="fixed -left-96 top-4 z-50 bg-cream p-3 font-bold focus:left-4">Langsung ke isi</a>
       <Header />
-      <main id="isi">
+      <main id="isi" className="scroll-mt-20 sm:scroll-mt-24">
         <Hero />
         <MenuSection items={menuItems} />
         <LocationSection />
